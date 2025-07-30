@@ -2,7 +2,8 @@ name: Hello World
 
 on:
   schedule:
-    - cron: '10 * * * *'  
+    - cron: '10 * * * *'   # À la minute 10 de chaque heure (UTC)
+  workflow_dispatch:         # Permet de le lancer manuellement (utile pour tester)
 
 jobs:
   say-hello:
