@@ -1,9 +1,8 @@
 name: Hello World
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '*/5 * * * *'  # toutes les 5 minutes
 
 jobs:
   say-hello:
@@ -14,3 +13,4 @@ jobs:
 
       - name: Say Hello
         run: echo "Hello, world!"
+
